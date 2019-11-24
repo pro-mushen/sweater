@@ -4,5 +4,5 @@
 <@c.page>
     <div class="mb-1">Add new user</div>
     ${message?ifExists}
-    <@r.login "/registration", true/>
+    <@r.login "/registration" true/>
 </@c.page>
