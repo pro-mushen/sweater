@@ -75,3 +75,9 @@
         <button class="btn btn-primary" type="submit">Sign Out</button>
     </form>
 </#macro>
+
+<#macro SignIn>
+    <form action="/login" method="get">
+        <button class="btn btn-primary" type="submit">Sign In</button>
+    </form>
+</#macro>

@@ -1,4 +1,5 @@
 <#import "parts/common.ftl" as c>
+<#include "parts/security.ftl">
 
 <@c.page>
     List user
@@ -14,7 +15,7 @@
             <tr>
                 <td>${user.username}</td>
                 <td><#list user.roles as role>${role}<#sep>, </#list></td>
-                <td><a href="/users/${user.id}"> edit</a></td>
+                <td><a href="/user/${user.id}"> edit</a></td>
             </tr>
         </#list>
     </table>

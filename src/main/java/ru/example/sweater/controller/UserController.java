@@ -13,7 +13,7 @@ import ru.example.sweater.service.UserService;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
     @Autowired
     UserService userService;
@@ -40,7 +40,7 @@ public class UserController {
             @RequestParam Map<String, String> form,
             @RequestParam("userId") User user) {
         userService.saveUser(user, username, form);
-        return "redirect:/users";
+        return "redirect:/user";
     }
 
     @GetMapping("profile")
@@ -57,7 +57,7 @@ public class UserController {
             @RequestParam String email
     ) {
         userService.updateUser(user, password, email);
-        return "redirect:/users/profile";
+        return "redirect:/user/profile";
     }
 
 
